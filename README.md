@@ -91,7 +91,10 @@ $ lsmod | grep 'ar9003_csi'
 ```
 This kernel module “ar9003_csi” is crucial for CSI collection because it helps create CSI-detectable packets on the transmitter, and obtain CSI data on the receiver. If you get the message like this:
 
-![](https://camo.githubusercontent.com/900b176fe93188e2dc77ae5e9a2b185d1e5cfe6f/687474703a2f2f706463632e6e74752e6564752e73672f77616e64732f41746865726f732f696d616765732f4353495f6d6f64756c652e706e67)
+```
+root@arduino:~# lsmod | grep 'ar9003_csi'
+ar9003_csi        94596   1  ath9k_hw
+```
 
 Now you have got the CSI availability of Netgear WNDR3700v4.
 
