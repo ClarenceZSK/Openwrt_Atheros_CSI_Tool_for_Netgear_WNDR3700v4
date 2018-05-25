@@ -52,7 +52,9 @@ $ make menuconfig
 ```
 The GUI is as shown in following figure:
 ![](https://camo.githubusercontent.com/4a1486c1e78242af80f52fc95844acdf2c574cf4/687474703a2f2f706463632e6e74752e6564752e73672f77616e64732f41746865726f732f696d616765732f6d656e75636f6e6669672e706e67)
-When you search the target system, you cannot find **wndr3700v4** in the menu "Target Profile (Default Profile (all drivers))". Instead, you will see target _wndr3700_. But it only supports _wndr3700v1_ and _wndr3700v2_. Plese note that you need to first select **Subtarget  (Generic)** and select **generic devices with NAND flash**. Then return to the menu shown in the above figure, enter the "Target Profile" again, you can find and select **wndr3700v4** target.
+When you search the target system, you cannot find **wndr3700v4** in the menu "Target Profile (Default Profile (all drivers))". Instead, you will see target _wndr3700_. But it only supports _wndr3700v1_ and _wndr3700v2_.
+
+Here you need to first select **Subtarget  (Generic)** and select **generic devices with NAND flash**. Then return to the menu shown in the above figure, enter the "Target Profile" again, you can find and select **wndr3700v4** target.
 
 **Please** remember to compile the sendData and recvCSI by entering the CSI configuration as following figure shows:
 
