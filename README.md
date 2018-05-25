@@ -55,14 +55,22 @@ The GUI is as shown in following figure:
 When you search the target system, you cannot find **wndr3700v4** in the menu "Target Profile (Default Profile (all drivers))". Instead, you will see target _wndr3700_. But it only supports _wndr3700v1_ and _wndr3700v2_. Plese note that you need to first select **Subtarget  (Generic)** and select **generic devices with NAND flash**. Then return to the menu shown in the above figure, enter the "Target Profile" again, you can find and select **wndr3700v4** target.
 
 **Please** remember to compile the sendData and recvCSI by entering the CSI configuration as following figure shows:
+
 ![](https://camo.githubusercontent.com/40b92ef85a54a90ab39dc4f95bea51e6e1371e1c/687474703a2f2f706463632e6e74752e6564752e73672f77616e64732f41746865726f732f696d616765732f6d616b654353492e706e67)
+
 Then select the recvCSI and sendData as built-in modules as following figure shows:
+
 ![](https://camo.githubusercontent.com/c4894e38fc55d8a4171967ab873aea91878ea501/687474703a2f2f706463632e6e74752e6564752e73672f77616e64732f41746865726f732f696d616765732f726563764353492e706e67)
+
 **NOTE** If you want to use the injector mode, please select the lorcon as the built-in module. To select lorcon, please enter the Library section as following figure shows:
+
 ![](https://camo.githubusercontent.com/9310e8989f1b854606426952b7fd3918bd829481/687474703a2f2f706463632e6e74752e6564752e73672f77616e64732f41746865726f732f696d616765732f6c69625f6d616b652e706e67)
+
 and then find and select loron:
+
 ![](https://camo.githubusercontent.com/a57347f460571f8acf1afab880e2cd9d1bdb6581/687474703a2f2f706463632e6e74752e6564752e73672f77616e64732f41746865726f732f696d616765732f6c6f72636f6e2e706e67)
-**note** There is a conflict between two modules: _libustream-openssl_ and _libustream-mbedtls_. Please exclude one of them in the Library section.
+
+**NOTE** There is a conflict between two modules: _libustream-openssl_ and _libustream-mbedtls_. Please exclude one of them in the Library section.
 
 #### Compile
 Build by:
@@ -80,7 +88,9 @@ The final step is to follow the aforementioned steps to flash our compiled firmw
 $ lsmod | grep 'ar9003_csi'
 ```
 This kernel module “ar9003_csi” is crucial for CSI collection because it helps create CSI-detectable packets on the transmitter, and obtain CSI data on the receiver. If you get the message like this:
+
 ![](https://camo.githubusercontent.com/900b176fe93188e2dc77ae5e9a2b185d1e5cfe6f/687474703a2f2f706463632e6e74752e6564752e73672f77616e64732f41746865726f732f696d616765732f4353495f6d6f64756c652e706e67)
+
 Now you have got the CSI availability of Netgear WNDR3700v4.
 
 This is an extension of the Atheros CSI Tool in OpenWRT developed by Dr. Yaxiong Xie. Please refer to his [GitHub](https://github.com/xieyaxiongfly/Atheros_CSI_tool_OpenWRT_src) for more information.
