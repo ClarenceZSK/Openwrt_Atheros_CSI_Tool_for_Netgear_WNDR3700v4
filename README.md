@@ -5,7 +5,7 @@ If you are interested in Atheros CSI tool, please refer to [the maintenance page
 
 ## Install OpenWRT
 ### Install from binary firmware
-You need the system firmware to install OpenWRT on your device. Please obtain the firmware for Netgear WNDR3700v4 from our [GitHub](). There are only two firmware in this Github folder:
+You need the system firmware to install OpenWRT on your device. Please obtain the firmware for Netgear WNDR3700v4 from the [bin directory](https://github.com/ClarenceZSK/Openwrt_Atheros_CSI_Tool_for_Netgear_WNDR3700v4/tree/master/bin/targets/ar71xx/nand). There are only two firmware in this Github folder:
 * openwrt-ar71xx-nand-wndr3700v4-ubi-factory.img --- it is used when you want to upgrade from the origin system to OpenWRT for the first time.
 * openwrt-ar71xx-nand-wndr3700v4-squashfs-sysupgrade.tar --- it is used when your device has already been flashed with OpenWRT and you want to update the system running on it.
 
