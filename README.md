@@ -18,12 +18,12 @@ This repo is the source code. You can compile our modified OpenWRT system. After
 
 #### Prerequisite
 Before stating to build, we need to install some necessary packages by:
-'<$ sudo apt-get update>'
-'<$ sudo apt-get install sudo apt-get install git python sed wget cvs subversion git-core coreutils unzip texi2html  
+<b>$ sudo apt-get update</b>
+<b>$ sudo apt-get install sudo apt-get install git python sed wget cvs subversion git-core coreutils unzip texi2html  
 texinfo docbook-utils gawk python-pysqlite2 diffstat help2man make gcc g++ build-essential g++ desktop-file-utils     
 chrpath flex libncurses5 libncurses5-dev zlib1g-dev pkg-config gettext libxml-simple-perl guile-1.8 cmake libssl-dev
 xsltproc fastjar mercurial pngcrush imagemagick tcl binutils bzip2 perl grep diffutils openjdk-7-jdk zlib1g zlib1g-dbg
-zlib1g-dev zlib-bin zlibc zlib-gst ccache distcc gcc-multilib g++-multilib bin86 libtool>'
+zlib1g-dev zlib-bin zlibc zlib-gst ccache distcc gcc-multilib g++-multilib bin86 libtool</b>
 
 
 
