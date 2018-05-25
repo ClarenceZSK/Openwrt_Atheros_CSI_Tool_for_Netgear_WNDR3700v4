@@ -271,7 +271,8 @@ define KernelPackage/ath9k-common
   DEPENDS+= @PCI_SUPPORT||USB_SUPPORT||TARGET_ar71xx +kmod-ath +@DRIVER_11N_SUPPORT +@DRIVER_11W_SUPPORT
   FILES:= \
 	$(PKG_BUILD_DIR)/drivers/net/wireless/ath/ath9k/ath9k_common.ko \
-	$(PKG_BUILD_DIR)/drivers/net/wireless/ath/ath9k/ath9k_hw.ko
+	$(PKG_BUILD_DIR)/drivers/net/wireless/ath/ath9k/ath9k_hw.ko \
+	$(PKG_BUILD_DIR)/drivers/net/wireless/ath/ath9k/ar9003_csi.ko
 endef
 
 define KernelPackage/ath9k
@@ -1788,6 +1789,9 @@ define Build/Prepare
 		$(PKG_BUILD_DIR)/backport-include/linux/bcm47xx_nvram.h
 
 	echo 'compat-wireless-$(PKG_VERSION)-$(PKG_RELEASE)-$(REVISION)' > $(PKG_BUILD_DIR)/compat_version
+	$(CP) ./files/regdb.txt $(PKG_BUILD_DIR)/net/wireless/db.txt
+	$(CP) ./csi/ar9003_csi.c $(PKG_BUILD_DIR)/drivers/net/wireless/ath/ath9k/
+	$(CP) ./csi/ar9003_csi.h $(PKG_BUILD_DIR)/drivers/net/wireless/ath/ath9k/
 endef
 
 ifneq ($(CONFIG_PACKAGE_kmod-cfg80211)$(CONFIG_PACKAGE_kmod-lib80211),)
